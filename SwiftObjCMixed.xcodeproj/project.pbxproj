@@ -16,6 +16,7 @@
 		C9273FBA2448EB8F00B98A32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9273FB92448EB8F00B98A32 /* main.m */; };
 		C9273FC42448EB8F00B98A32 /* SwiftObjCMixedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9273FC32448EB8F00B98A32 /* SwiftObjCMixedTests.m */; };
 		C9273FCF2448EB8F00B98A32 /* SwiftObjCMixedUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9273FCE2448EB8F00B98A32 /* SwiftObjCMixedUITests.m */; };
+		C9273FDE2448EBA100B98A32 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9273FDD2448EBA100B98A32 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		C9273FCA2448EB8F00B98A32 /* SwiftObjCMixedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftObjCMixedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9273FCE2448EB8F00B98A32 /* SwiftObjCMixedUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftObjCMixedUITests.m; sourceTree = "<group>"; };
 		C9273FD02448EB8F00B98A32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9273FDC2448EBA100B98A32 /* SwiftObjCMixed-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftObjCMixed-Bridging-Header.h"; sourceTree = "<group>"; };
+		C9273FDD2448EBA100B98A32 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				C9273FB52448EB8F00B98A32 /* LaunchScreen.storyboard */,
 				C9273FB82448EB8F00B98A32 /* Info.plist */,
 				C9273FB92448EB8F00B98A32 /* main.m */,
+				C9273FDD2448EBA100B98A32 /* Test.swift */,
+				C9273FDC2448EBA100B98A32 /* SwiftObjCMixed-Bridging-Header.h */,
 			);
 			path = SwiftObjCMixed;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				TargetAttributes = {
 					C9273FA32448EB8C00B98A32 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					C9273FBE2448EB8F00B98A32 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -269,6 +275,7 @@
 			files = (
 				C9273FAF2448EB8C00B98A32 /* ViewController.m in Sources */,
 				C9273FA92448EB8C00B98A32 /* AppDelegate.m in Sources */,
+				C9273FDE2448EBA100B98A32 /* Test.swift in Sources */,
 				C9273FBA2448EB8F00B98A32 /* main.m in Sources */,
 				C9273FAC2448EB8C00B98A32 /* SceneDelegate.m in Sources */,
 			);
@@ -439,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FPR5C96X44;
 				INFOPLIST_FILE = SwiftObjCMixed/Info.plist;
@@ -448,6 +456,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathany.SwiftObjCMixed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftObjCMixed/SwiftObjCMixed-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -456,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FPR5C96X44;
 				INFOPLIST_FILE = SwiftObjCMixed/Info.plist;
@@ -465,6 +477,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nathany.SwiftObjCMixed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftObjCMixed/SwiftObjCMixed-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -472,6 +486,7 @@
 		C9273FD72448EB8F00B98A32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FPR5C96X44;
@@ -492,6 +507,7 @@
 		C9273FD82448EB8F00B98A32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FPR5C96X44;
@@ -512,6 +528,7 @@
 		C9273FDA2448EB8F00B98A32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FPR5C96X44;
 				INFOPLIST_FILE = SwiftObjCMixedUITests/Info.plist;
@@ -530,6 +547,7 @@
 		C9273FDB2448EB8F00B98A32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FPR5C96X44;
 				INFOPLIST_FILE = SwiftObjCMixedUITests/Info.plist;

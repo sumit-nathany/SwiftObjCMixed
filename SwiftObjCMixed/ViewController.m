@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SwiftObjCMixed-Swift.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,10 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view.
+	NSURL *resolvedUrl = [NSURL URLWithString:nil];
+	Test* a = [[Test alloc] init];
+	[a handleRoutingWithUrl:resolvedUrl];
+
 }
 
 
